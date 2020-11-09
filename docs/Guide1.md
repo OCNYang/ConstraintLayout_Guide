@@ -4,7 +4,7 @@
 
 相对定位，在水平以及垂直轴线的方向上，一个控件的一边受到另一个控件的一边的约束。  
 比如，Button B 受到 Button A 的约束：  
-![]()  
+![relative_positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/relative-positioning.png?raw=true)  
 
 ```
 <!--将按钮B的左边限制在按钮A的右边-->
@@ -14,7 +14,7 @@
 ```
 
 约束布局的坐标示意图：  
-![]()  
+![](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/relative-positioning-constraints.png?raw=true)  
 
 以下是可用的约束条件列表：  
 
@@ -43,7 +43,7 @@
 
 ## margin 外边距
 
-![Relative Positioning Margins]()  
+![Relative Positioning Margins](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/relative-positioning-margin.png?raw=true)  
 
 
 关于 margin 主要有以下几个属性：  
@@ -80,7 +80,7 @@ ConstraintLayout 非常有用的一个方面是对“不可能”约束的处理
 ```
 当约束遇到这种情况时，因为控件不可能同时满足这两个约束（**宽度一定时**，和父布局左边对齐的同时和父布局右边也对齐），这时，约束就像相反的力量一样将控件平均分开，这样控件最终会在父布局中居中。  
 
-![Centering Positioning]()
+![Centering Positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/centering-positioning.png?raw=true)
 
 上面这个例子中相反约束造成的置中，只是在控件的宽度（或高度）一定时形成的效果。而如果把上面例子中的宽度改为 `android:layout_width="0dp` 时，这个时候，控件 button 的宽度就会因为双向约束的存在而充满父布局，相当于 `android:layout_width="match_parent"`
 
@@ -91,7 +91,7 @@ ConstraintLayout 非常有用的一个方面是对“不可能”约束的处理
 * layout_constraintHorizontal_bias
 * layout_constraintVertical_bias
 
-![Centering Positioning with Bias]()
+![Centering Positioning with Bias](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/centering-positioning-bias.png?raw=true)
 
 例如，将左侧的偏移值从默认的 50% 改为 30% ，这样左侧会更短，控件会更偏向左侧：  
 ```
@@ -114,8 +114,8 @@ ConstraintLayout 非常有用的一个方面是对“不可能”约束的处理
 * layout_constraintCircleAngle //小部件应该处于哪个角度(角度，从0到360)
 
 如图：  
-![Circular Positioning]()  
-![Circular Positioning]()  
+![Circular Positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/circle1.png?raw=true)  
+![Circular Positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/circle2.png?raw=true)  
 
 ```
 <Button android:id="@+id/buttonA" ... />
@@ -145,7 +145,7 @@ ConstraintLayout 下的子控件的尺寸，也就是 layout_height 和 layout_w
 
 > 如果使用 match_parent 属性，其实也是会有充满的效果的，但我们一般不提倡使用。但你可以使用 0dp 结合 反向约束，达到充满父布局的效果。
 
-![]()
+![](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/dimension-match-constraints.png?raw=true)
 
 ### WRAP_CONTENT 尺寸
 
@@ -204,11 +204,11 @@ ConstraintLayout 下的子控件的尺寸，也就是 layout_height 和 layout_w
 **创建一个链**
 如果一个组内不同的控件，通过双向连接链接在一起，则认为它们就是一个链。
 如下图，有两个控件的最小的链：
-![Chain]()
+![Chain](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/chains.png?raw=true)
 
 **链头**  
 在一个链组中，链中的第一个元素我们称为链头控件（对于水平链来说，头部是最左边的部件，对于垂直链来说，头部是最上面的部件）。我们可以在链头控件上设置一定属性来控制整条链。  
-![Chain Head]()
+![Chain Head](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/chains-head.png?raw=true)
 
 **链间隙**
 如果在连接中指定了边距 margins ，则会将其考虑在内。在链扩展的情况下，将从分配的空间中扣除差额。
@@ -222,7 +222,7 @@ ConstraintLayout 下的子控件的尺寸，也就是 layout_height 和 layout_w
 * CHAIN_SPREAD_INSIDE // 类似，但是链的端点不会散开
 * CHAIN_PACKED // 链中的元素将被打包在一起。子元素的水平或垂直偏差属性将会影响包装元素的位置
 
-![Chains Styles]()  
+![Chains Styles](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/chains-styles.png?raw=true)  
 
 **链的权重**
 
