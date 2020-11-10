@@ -18,4 +18,10 @@ class MainActivity : AppCompatActivity() {
     fun onClickBtn1(view: View) {
         startActivity(Intent(this, ConstraintLayoutBasicsActivity::class.java))
     }
+    /**
+     * 辅助类部件
+     */
+    fun onClickBtn2(view: View) {
+        startActivity(Intent(this, ConstraintLayoutBasicsActivity::class.java))
+    }
 }

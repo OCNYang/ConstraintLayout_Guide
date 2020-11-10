@@ -120,11 +120,11 @@ Layer 的用法很简单，它的主要作用是给 ConstraintLayout 布局下�
 Flow 是 VirtualLayout 同样也是实现于 ContraintHelper，和其他子类一样，通过 `constraint_referenced_ids` 来引用 ConstraintLayout 下的子控件。可以水平或垂直定位引用的控件，类似于链。
 通过 `flow_wrapMode` 可以指定具体的排列方式，有三种模式（后面还会详解）：
 * **wrap none** : 简单地把 constraint_referenced_ids 里面的元素组成 chain, 即使空间不够  
-![wrap none](../flow_wrap_none.png)
+![wrap none](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/flow_wrap_none.png)
 * **wrap chain** : 根据空间的大小和元素的大小组成一条或者多条 chain  
-![wrap chain](../flow_wrap_chain.png)
+![wrap chain](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/flow_wrap_chain.png)
 * **wrap aligned** : wrap chain 类似，但是会对齐  
-![wrap aligned](../flow_wrap_aligned.png)
+![wrap aligned](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/flow_wrap_aligned.png)
 
 VirtualLayout 是 ConstraintHelper 的实现，它也是普通的视图 View，所以你可以像其他 View 一样使用它。比如在它上面设置约束、给它设置 View 的一些属性（背景、padding 等）。
 VirtualLayout 和其他 ViewGroup 之间的主要区别有：
