@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConstraintLayout_Guide">
-        <activity android:name=".basics.ConstraintLayoutBasicsActivity"></activity>
+        <activity android:name=".assist_view.ConstraintLayoutAssistViewActivity"></activity>
+        <activity android:name=".basics.ConstraintLayoutBasicsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

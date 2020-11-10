@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".assist_view.ConstraintLayoutAssistViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Guideline 示例\nTips: 红线是为了展示 Guideline 的位置而添加的 View ，并非 Guideline 本身" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="100dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_hor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_red_dark"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline_vertical"
+                app:layout_constraintRight_toRightOf="@id/guideline_vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_red_dark"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_hor"
+                app:layout_constraintTop_toTopOf="@+id/guideline_hor" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline_hor"
+                app:layout_constraintRight_toRightOf="@+id/guideline_vertical" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#20c0e0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline_vertical"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline_hor" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#20a7e7"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline_hor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/guideline_vertical"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Barrier 示例\nTips: A、B、C：普通 ViewGroup 实现，XYZ：Barrier实现" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#c2eff7"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="AAAA"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#20c0e0"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="B"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#72ac4d"
+                android:gravity="center"
+                android:text="c"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <TextView
+                android:id="@+id/tv_barrierX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#c2eff7"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="XXX"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_barrierY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_barrierY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#20c0e0"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="Y"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_barrierX" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="tv_barrierX,tv_barrierY" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#72ac4d"
+                android:gravity="center"
+                android:text="Z"
+                android:textSize="50sp"
+                app:layout_constraintLeft_toRightOf="@+id/barrier"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Layer 示例" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <androidx.constraintlayout.helper.widget.Layer
+                android:id="@+id/layer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#72ac4d"
+                android:padding="20dp"
+                app:constraint_referenced_ids="tv_layer_left,viewLayer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_layer_left"
+                app:layout_constraintRight_toRightOf="@id/viewLayer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewLayer"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:background="#c2eff7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_layer_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#20a7e7"
+                android:padding="30dp"
+                android:text="左\n边"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@id/viewLayer"
+                app:layout_constraintRight_toLeftOf="@+id/viewLayer"
+                app:layout_constraintTop_toTopOf="@+id/viewLayer" />
+
+            <TextView
+                android:id="@+id/tv_layer_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#20c0e0"
+                android:padding="30dp"
+                android:text="右\n边"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@id/viewLayer"
+                app:layout_constraintLeft_toRightOf="@+id/viewLayer"
+                app:layout_constraintTop_toTopOf="@+id/viewLayer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

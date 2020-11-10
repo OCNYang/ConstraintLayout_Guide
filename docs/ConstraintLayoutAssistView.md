@@ -16,7 +16,9 @@ Guideline 有以下属性：
 * 自身位置定位（以尾端为准）：`app:layout_constraintGuide_end=“100dp”`；取值 dp 尺寸值；距离 底部 (水平)，右侧 ( 垂直 ) 位置；
 * 百分比自身位置定位：`app:layout_constraintGuide_percent=“0.5”`；取值 0 ~ 1.0 之间的小数，距始端的百分比位置。
 
-![demo Guideline]()
+![Guideline](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/guideline.png)
+
+![Guideline demo](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/guideline_demo.png)
 
 ## Barrier 阻碍线
 

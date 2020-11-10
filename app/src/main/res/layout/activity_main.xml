@@ -20,7 +20,7 @@
         android:onClick="onClickBtn2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="相对定位"
+        android:text="虚拟辅助类部件"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn1"/>
