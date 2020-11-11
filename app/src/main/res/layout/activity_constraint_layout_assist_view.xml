@@ -237,5 +237,219 @@
                 app:layout_constraintLeft_toRightOf="@+id/viewLayer"
                 app:layout_constraintTop_toTopOf="@+id/viewLayer" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Flow 示例\nflow_wrapMode 从上到下依次为 none、chain、aligned" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e2a328">
+
+            <TextView
+                android:id="@+id/viewFlow1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="A"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/viewFlow2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="B"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="C"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="D"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="E"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="F"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="viewFlow1,viewFlow2,viewFlow3,viewFlow4,viewFlow5,viewFlow6"
+                app:flow_horizontalGap="20dp"
+                app:flow_wrapMode="none"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#e2a328">
+
+            <TextView
+                android:id="@+id/viewFlow11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow12"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="B"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow13"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="C"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow14"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="D"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow15"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="E"
+                android:textSize="20sp" />
+
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="viewFlow11,viewFlow12,viewFlow13,viewFlow14,viewFlow15"
+                app:flow_horizontalGap="20dp"
+                app:flow_verticalGap="20dp"
+                app:flow_wrapMode="chain"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#e2a328">
+
+            <TextView
+                android:id="@+id/viewFlow111"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="A"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/viewFlow112"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="B"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow113"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="C"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow114"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="D"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow115"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="E"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/viewFlow116"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c2eff7"
+                android:gravity="center"
+                android:text="F"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="viewFlow111,viewFlow112,viewFlow113,viewFlow114,viewFlow115,viewFlow116"
+                app:flow_horizontalGap="20dp"
+                app:flow_verticalGap="20dp"
+                app:flow_wrapMode="aligned"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </ScrollView>

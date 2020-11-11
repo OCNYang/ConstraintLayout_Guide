@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -750,8 +749,8 @@
                 android:text="A \n（packed chain with bias）"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/tvB5" />
 

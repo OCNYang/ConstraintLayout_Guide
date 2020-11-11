@@ -113,7 +113,7 @@ Layer 的用法很简单，它的主要作用是给 ConstraintLayout 布局下�
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-![代码 demo]()
+![layer demo](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/layer_demo.png)
 
 如果你想实现共同的动画，只需要将动画作用到 Layer 上就行了，这样它绑定的多个 View 就会有共同的动画效果。
 
