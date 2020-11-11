@@ -1,5 +1,7 @@
 # ConstraintLayout 基础讲解（官方 API 文档翻译）
 
+本文翻译自[官方文档](https://developer.android.google.cn/reference/android/support/constraint/ConstraintLayout)
+
 ## 相对定位
 
 相对定位，在水平以及垂直轴线的方向上，一个控件的一边受到另一个控件的一边的约束。  
