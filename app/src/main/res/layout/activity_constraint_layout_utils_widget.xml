@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utils_widget.ConstraintLayoutUtilsWidgetActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".utils_widget.ConstraintLayoutUtilsWidgetActivity">
+
+        <TextView
+            android:id="@+id/tv_title_image_filter_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="ImageFilterButton"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_round_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="roundPercent 圆角 取值：0-1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:roundPercent="0" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:roundPercent="0.5" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:roundPercent="1" />
+
+        <TextView
+            android:id="@+id/tv_title_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="round 圆角 像素值" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:round="0dp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:round="20dp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:round="50dp" />
+
+        <TextView
+            android:id="@+id/tv_title_crossfade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="src 和 altSrc 图片交叉淡化\n crossfade 交叉程度 取值：0-1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:altSrc="@android:color/holo_red_dark"
+            app:crossfade="0" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:altSrc="@android:color/holo_red_dark"
+            app:crossfade="0.5" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:altSrc="@android:color/holo_red_dark"
+            app:crossfade="1" />
+
+        <TextView
+            android:id="@+id/tv_title_warmth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="warmth 色温\n 1=neutral 自然，2=warm 暖色，0.5=cold 冷色" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:warmth="0.5" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:warmth="1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:warmth="2" />
+
+        <TextView
+            android:id="@+id/tv_title_brightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="brightness 亮度\n 0 = black 暗色，1 = original 原始，2 = twice as bright 两倍亮度" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:brightness="0" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:brightness="1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:brightness="2" />
+
+        <TextView
+            android:id="@+id/tv_title_saturation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="saturation 饱和度\n 0 = grayscale 灰色，1 = original 原始，2 = hyper saturated 超饱和" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:saturation="0" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:saturation="1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:saturation="2" />
+
+        <TextView
+            android:id="@+id/tv_title_contrast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="contrast 对比\n 1 = unchanged 原始，0 = gray 暗淡，2 = high contrast 高对比" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:contrast="0" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:contrast="1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/ifb_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:contrast="2" />
+
+        <TextView
+            android:id="@+id/tv_title_image_filter_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="ImageFilterView 所有属性和 ImageFilterButton 完全相同"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/ifv_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:brightness="2"
+            app:contrast="1"
+            app:roundPercent="1"
+            app:saturation="2"
+            app:warmth="2" />
+
+        <TextView
+            android:id="@+id/tv_title_mockview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="MockView"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.utils.widget.MockView
+            android:id="@+id/mockview_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <androidx.constraintlayout.utils.widget.MockView
+            android:id="@+id/mockview_2"
+            android:layout_width="180dp"
+            android:layout_height="80dp" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            app:constraint_referenced_ids="tv_title_image_filter_btn,tv_title_round_percent,ifb_1,ifb_2,ifb_3,tv_title_round,ifb_4,ifb_5,ifb_6,tv_title_crossfade,ifb_7,ifb_8,ifb_9,tv_title_warmth,ifb_10,ifb_11,ifb_12,tv_title_brightness,ifb_13,ifb_14,ifb_15,tv_title_saturation,ifb_16,ifb_17,ifb_18,tv_title_contrast,ifb_19,ifb_20,ifb_21,tv_title_image_filter_view,ifv_22,tv_title_mockview,mockview_1,mockview_2"
+            app:flow_horizontalGap="20dp"
+            app:flow_maxElementsWrap="3"
+            app:flow_verticalGap="20dp"
+            app:flow_wrapMode="chain"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

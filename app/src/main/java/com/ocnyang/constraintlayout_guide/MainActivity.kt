@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.ocnyang.constraintlayout_guide.assist_view.ConstraintLayoutAssistViewActivity
 import com.ocnyang.constraintlayout_guide.basics.ConstraintLayoutBasicsActivity
+import com.ocnyang.constraintlayout_guide.utils_widget.ConstraintLayoutUtilsWidgetActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,5 +25,9 @@ class MainActivity : AppCompatActivity() {
      */
     fun onClickBtn2(view: View) {
         startActivity(Intent(this, ConstraintLayoutAssistViewActivity::class.java))
+    }
+
+    fun onClickBtn3(view: View) {
+        startActivity(Intent(this, ConstraintLayoutUtilsWidgetActivity::class.java))
     }
 }
