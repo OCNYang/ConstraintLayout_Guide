@@ -17,7 +17,9 @@ ImageFilterButton 的属性有以下：
 ![Guideline](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/ImageFilterButton2.jpeg)
 
 
-上面调节图片属性的取值都是 0、1、2，不过大家可以取其他值，效果也是不一样的。 还有一个属性 overlay。
+> 上面调节图片属性的取值都是 0、1、2，不过大家可以取其他值，效果也是不一样的。 
+> 还有一个属性 overlay，官方解释：定义替换图像是在原始图像上淡入淡出还是与其交叉淡入淡出。默认为true。对于半透明对象设置为false。
+> 由上方 Demo 截图可以看出，altSrc 和 crossfade 效果失效；brightness 亮度也看不出来差别效果。
 
 ## ImageFilterView
 
