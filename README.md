@@ -432,8 +432,9 @@ VirtualLayout 和其他 ViewGroup 之间的主要区别有：
 * [ConstraintLayout 引导线 Guideline 约束 (简介 | 可视化操作 | 属性 | 水平引导线 | 垂直引导线 | 开始结束尺寸 | 百分比位置 | 约束组件)](https://blog.csdn.net/shulianghan/article/details/105982860)
 * [Constraintlayout 2.0：你们要的更新](https://blog.csdn.net/Android725/article/details/107721625)
 
+---
 
-# ConstraintHelper
+# 三：ConstraintHelper
 
 其实通过上面的教程，大家应该很熟悉 ConstraintHelper 了，至少对它的使用形式很熟悉了。通过 `app:constraint_referenced_ids` 来指定要反映特定效果的控件集合，用逗号分隔的 ID 来指定。
 
