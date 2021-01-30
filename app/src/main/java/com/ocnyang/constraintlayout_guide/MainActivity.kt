@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.ocnyang.constraintlayout_guide.assist_view.ConstraintLayoutAssistViewActivity
 import com.ocnyang.constraintlayout_guide.basics.ConstraintLayoutBasicsActivity
+import com.ocnyang.constraintlayout_guide.constraint_helper.ConstraintHelperActivity
 import com.ocnyang.constraintlayout_guide.utils_widget.ConstraintLayoutUtilsWidgetActivity
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +28,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, ConstraintLayoutAssistViewActivity::class.java))
     }
 
+    /**
+     * utils 小控件
+     */
     fun onClickBtn3(view: View) {
         startActivity(Intent(this, ConstraintLayoutUtilsWidgetActivity::class.java))
+    }
+    /**
+     * utils 小控件
+     */
+    fun onClickBtn4(view: View) {
+        startActivity(Intent(this, ConstraintHelperActivity::class.java))
     }
 }
