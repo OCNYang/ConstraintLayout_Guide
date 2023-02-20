@@ -27,7 +27,7 @@
 
 相对定位，在水平以及垂直轴线的方向上，一个控件的一边受到另一个控件的一边的约束。  
 比如，Button B 受到 Button A 的约束：  
-![relative_positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/relative-positioning.png?raw=true)  
+![relative_positioning](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/relative-positioning.png?raw=true)  
 
 ```
 <!--将按钮B的左边限制在按钮A的右边-->
@@ -37,7 +37,7 @@
 ```
 
 约束布局的坐标示意图：  
-![](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/relative-positioning-constraints.png?raw=true)  
+![](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/relative-positioning-constraints.png?raw=true)  
 
 以下是可用的约束条件列表：  
 
@@ -66,7 +66,7 @@
 
 ## margin 外边距
 
-![Relative Positioning Margins](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/relative-positioning-margin.png?raw=true)  
+![Relative Positioning Margins](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/relative-positioning-margin.png?raw=true)  
 
 
 关于 margin 主要有以下几个属性：  
@@ -103,7 +103,7 @@ ConstraintLayout 非常有用的一个方面是对“不可能”约束的处理
 ```
 当约束遇到这种情况时，因为控件不可能同时满足这两个约束（**宽度一定时**，和父布局左边对齐的同时和父布局右边也对齐），这时，约束就像相反的力量一样将控件平均分开，这样控件最终会在父布局中居中。  
 
-![Centering Positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/centering-positioning.png?raw=true)
+![Centering Positioning](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/centering-positioning.png?raw=true)
 
 上面这个例子中相反约束造成的置中，只是在控件的宽度（或高度）一定时形成的效果。而如果把上面例子中的宽度改为 `android:layout_width="0dp` 时，这个时候，控件 button 的宽度就会因为双向约束的存在而充满父布局，相当于 `android:layout_width="match_parent"`
 
@@ -114,7 +114,7 @@ ConstraintLayout 非常有用的一个方面是对“不可能”约束的处理
 * layout_constraintHorizontal_bias
 * layout_constraintVertical_bias
 
-![Centering Positioning with Bias](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/centering-positioning-bias.png?raw=true)
+![Centering Positioning with Bias](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/centering-positioning-bias.png?raw=true)
 
 例如，将左侧的偏移值从默认的 50% 改为 30% ，这样左侧会更短，控件会更偏向左侧：  
 ```
@@ -137,8 +137,8 @@ ConstraintLayout 非常有用的一个方面是对“不可能”约束的处理
 * layout_constraintCircleAngle //小部件应该处于哪个角度(角度，从0到360)
 
 如图：  
-![Circular Positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/circle1.png?raw=true)  
-![Circular Positioning](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/circle2.png?raw=true)  
+![Circular Positioning](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/circle1.png?raw=true)  
+![Circular Positioning](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/circle2.png?raw=true)  
 
 ```
 <Button android:id="@+id/buttonA" ... />
@@ -168,7 +168,7 @@ ConstraintLayout 下的子控件的尺寸，也就是 layout_height 和 layout_w
 
 > 如果使用 match_parent 属性，其实也是会有充满的效果的，但我们一般不提倡使用。但你可以使用 0dp 结合 反向约束，达到充满父布局的效果。
 
-![](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/dimension-match-constraints.png?raw=true)
+![](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/dimension-match-constraints.png?raw=true)
 
 ### WRAP_CONTENT 尺寸
 
@@ -227,11 +227,11 @@ ConstraintLayout 下的子控件的尺寸，也就是 layout_height 和 layout_w
 **创建一个链**
 如果一个组内不同的控件，通过双向连接链接在一起，则认为它们就是一个链。
 如下图，有两个控件的最小的链：
-![Chain](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/chains.png?raw=true)
+![Chain](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/chains.png?raw=true)
 
 **链头**  
 在一个链组中，链中的第一个元素我们称为链头控件（对于水平链来说，头部是最左边的部件，对于垂直链来说，头部是最上面的部件）。我们可以在链头控件上设置一定属性来控制整条链。  
-![Chain Head](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/chains-head.png?raw=true)
+![Chain Head](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/chains-head.png?raw=true)
 
 **链间隙**
 如果在连接中指定了边距 margins ，则会将其考虑在内。在链扩展的情况下，将从分配的空间中扣除差额。
@@ -245,7 +245,7 @@ ConstraintLayout 下的子控件的尺寸，也就是 layout_height 和 layout_w
 * CHAIN_SPREAD_INSIDE // 类似，但是链的端点不会散开
 * CHAIN_PACKED // 链中的元素将被打包在一起。子元素的水平或垂直偏差属性将会影响包装元素的位置
 
-![Chains Styles](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/chains-styles.png?raw=true)  
+![Chains Styles](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/chains-styles.png?raw=true)  
 
 **链的权重**
 
@@ -280,9 +280,9 @@ Guideline 有以下属性：
 * 自身位置定位（以尾端为准）：`app:layout_constraintGuide_end=“100dp”`；取值 dp 尺寸值；距离 底部 (水平)，右侧 ( 垂直 ) 位置；
 * 百分比自身位置定位：`app:layout_constraintGuide_percent=“0.5”`；取值 0 ~ 1.0 之间的小数，距始端的百分比位置。
 
-![Guideline](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/guideline.png)
+![Guideline](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/guideline.png)
 
-![Guideline demo](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/guideline_demo.png)
+![Guideline demo](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/guideline_demo.png)
 
 ## Barrier 阻碍线
 
@@ -292,12 +292,12 @@ Barrier 和 Guideline 一样，都是自己不可见，只是用来定位的控�
 一个例子
 假如我们要实现这样一种效果，控件 C 以控件 A 和 B 的最右边缘对齐。如下图：
 
-![Barrier 效果](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/barrier_demo.png?raw=true)
+![Barrier 效果](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/barrier_demo.png?raw=true)
 
 **不用 Barrier 的实现方法**  
 因为 A 和 B 的宽度是动态变化的，所以控件 C 不能简单的依赖于具体的 A 或 B 的右边缘，只能把 A 和 B 放到一个 ViewGroup 里面，然后控件 C 依赖于这个新的 ViewGroup 的右边缘。如下图：
 
-![ViewGroup 实现](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/barrier_demo2.png?raw=true)
+![ViewGroup 实现](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/barrier_demo2.png?raw=true)
 
 这样实现虽然可以解决问题，但是却引入了一层嵌套。而使用 Barrier 则可以不用嵌套就能实现这样的效果。
 
@@ -377,7 +377,7 @@ Layer 的用法很简单，它的主要作用是给 ConstraintLayout 布局下�
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-![layer demo](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/layer_demo.png)
+![layer demo](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/layer_demo.png)
 
 如果你想实现共同的动画，只需要将动画作用到 Layer 上就行了，这样它绑定的多个 View 就会有共同的动画效果。
 
@@ -386,11 +386,11 @@ Layer 的用法很简单，它的主要作用是给 ConstraintLayout 布局下�
 Flow 是 VirtualLayout 同样也是实现于 ContraintHelper，和其他子类一样，通过 `constraint_referenced_ids` 来引用 ConstraintLayout 下的子控件。可以水平或垂直定位引用的控件，类似于链。
 通过 `flow_wrapMode` 可以指定具体的排列方式，有三种模式（后面还会详解）：
 * **wrap none** : 简单地把 constraint_referenced_ids 里面的元素组成 chain, 即使空间不够  
-![wrap none](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/flow_wrap_none.png)
+![wrap none](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/flow_wrap_none.png)
 * **wrap chain** : 根据空间的大小和元素的大小组成一条或者多条 chain  
-![wrap chain](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/flow_wrap_chain.png)
+![wrap chain](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/flow_wrap_chain.png)
 * **wrap aligned** : wrap chain 类似，但是会对齐  
-![wrap aligned](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/flow_wrap_aligned.png)
+![wrap aligned](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/flow_wrap_aligned.png)
 
 VirtualLayout 是 ConstraintHelper 的实现，它也是普通的视图 View，所以你可以像其他 View 一样使用它。比如在它上面设置约束、给它设置 View 的一些属性（背景、padding 等）。
 VirtualLayout 和其他 ViewGroup 之间的主要区别有：
@@ -440,7 +440,7 @@ VirtualLayout 和其他 ViewGroup 之间的主要区别有：
 
 官方已提供实现的类有以下几个，基本上前面都已经介绍过了：
 
-![ConstraintHelper 实现类](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/ConstraintHelpers.png) 
+![ConstraintHelper 实现类](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/ConstraintHelpers.png) 
 
 ConstraintLayout2.0 除了提供以上几个已经实现的 ConstraintHelper 外，现在也支持自定义 ConstraintHelper 的方式。
 
@@ -480,7 +480,7 @@ public abstract class ConstraintHelper extends View {
 
 我们来实现一个简单的 Helper，当图片展示的时候，我们使它有揭露动画的效果：
 
-![实现效果](https://github.com/OCNYang/ConstraintLayout_Guide/blob/master/docs/ConstraintHelperDemo.jpeg)
+![实现效果](https://cdn.jsdelivr.net/gh/ocnyang/ConstraintLayout_Guide@master/docs/ConstraintHelperDemo.jpeg)
 
 CircularReveal 的效果我们使用 ViewAnimationUtils 提供的 `createCircularReveal` 方法：
 
